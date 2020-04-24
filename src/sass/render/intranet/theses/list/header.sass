@@ -1,0 +1,102 @@
+.header_theses
+    background: $color_green_default
+    height: 100px
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 1
+    transition: all 0.3s ease-in
+    .content_view_header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 20px 20px
+        .content_title
+            height: 60px
+            display: flex
+            align-items: center
+            h3
+                margin: 0
+                color: $color_white
+                font-size: 32px
+        .btn_open_form
+            bottom: -25px
+        .button_save
+            border-radius: 5px
+            background-color: $color_yellow_medium
+            margin-right: 40px
+    .btn-floating
+        display: flex
+        justify-content: center
+        align-items: center
+        background: $color_yellow_medium
+        position: absolute
+        width: 50px
+        height: 50px
+        right: 100px
+        .icon_add
+            width: 35px
+            height: 35px
+            svg
+                width: 100%
+                height: 100%
+        &.hidden
+            height: 0
+            width: 0
+    .btn_close_form
+            display: none
+    .content_form_thesis
+        display: none
+        .inp_date_form
+            max-width: 200px
+        .inp_names
+            max-width: 250px
+        .inp_thesis
+            margin-right: 50px
+            max-width: 550px
+    &.out
+        .content_form_thesis
+            animation: scale-display--reversed .3s
+            animation-fill-mode: forwards
+            display: block
+    &.open_form
+        height: 100%
+        position: fixed
+        .content_form_thesis
+            animation: scale-display .3s
+            display: block
+            padding: 20px
+        .btn_close_form
+            display: flex
+        .btn-floating
+            bottom: 50px
+            .icon_add
+                transform: rotate(45deg);
+
+@keyframes scale-display 
+    0%
+        opacity: 0
+        transform: scale(0)
+        -webkit-transform: scale(0)
+
+    100%
+        opacity: 1
+        transform: scale(1)
+        -webkit-transform: scale(1)
+
+@keyframes scale-display--reversed
+    0%
+        display: inline-flex
+        opacity: 1
+        transform: scale(1)
+        -webkit-transform: scale(1)
+    99%
+        display: inline-flex
+        opacity: 0
+        transform: scale(0)
+        -webkit-transform: scale(0)
+    100%
+        display: none
+        opacity: 0
+        transform: scale(0)
+        -webkit-transform: scale(0)

@@ -1,0 +1,19 @@
+.modal
+    padding: 20px
+    h4
+        color: $color_beach
+        border-bottom: red
+        font-size: 23px
+        @include breakpoint(740px)
+            font-size: 30px
+    .line_modal
+        height: 2px
+        width: 100%
+        background: $color_beach
+        margin-bottom: 15px
+    .modal-footer
+        @include breakpoint(0 480px)
+            display: flex
+            justify-content: center
+        .modal-action:last-child
+            margin-left: 20px
